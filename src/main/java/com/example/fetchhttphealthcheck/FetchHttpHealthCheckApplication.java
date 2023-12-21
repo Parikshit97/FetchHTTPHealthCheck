@@ -33,7 +33,6 @@ public class FetchHttpHealthCheckApplication {
         ObjectMapper objectMapper = new ObjectMapper();
         List<FetchEndpoint> endpoints = objectMapper.readValue(jsonContent, objectMapper.getTypeFactory().constructCollectionType(List.class, FetchEndpoint.class));
         return endpoints.toArray(new FetchEndpoint[0]);
-
     }
 
 }
